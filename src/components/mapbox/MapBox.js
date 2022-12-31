@@ -25,8 +25,8 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Bio() {
     return (
-<Grid container spacing={2} className="leftBioGrid">
-<Grid item md={6} sm={12} xs={12}>
+
+<Grid item md={10} sm={12} xs={12}>
   <Item sx={{height: '72vh', margin: '10px', backgroundColor: 'lightPink'}}>
     <img
       alt="Andy Humes - Junior Developer"
@@ -39,6 +39,6 @@ export default function Bio() {
   </Item>
 </Grid>
 
-</Grid>
+
     )
 }

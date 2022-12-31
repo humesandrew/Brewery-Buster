@@ -1,10 +1,11 @@
 import './App.css';
 import NavBar from './components/navbar/NavBar';
 import SearchBar from './components/searchbar/SearchBar';
+import MainBox from './components/mainbox/MainBox';
 import BrewBox from './components/brewbox/BrewBox';
 import MapBox from './components/mapbox/MapBox';
 
-import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 
 function App() {
   return (
@@ -14,8 +15,8 @@ function App() {
     <SearchBar>
     </SearchBar>
   <div>
-  <BrewBox></BrewBox>
-   <MapBox></MapBox>
+    
+  <MainBox />
   
     </div>
     </div>
