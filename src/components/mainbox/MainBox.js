@@ -1,10 +1,9 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import BrewBox from '../brewbox/BrewBox';
-import MapBox from '../mapbox/MapBox';
+import BrewBox from "../brewbox/BrewBox";
+import MapBox from "../mapbox/MapBox";
 
 import "./mainbox.css";
-
 
 import { styled } from "@mui/material/styles";
 
@@ -21,19 +20,26 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Bio() {
   return (
-    
-      <Grid container spacing={2} className="leftBioGrid" sx={{marginTop: '10px', display: 'flex', justifyContent: 'space-evenly'}}>
-        <Grid item md={6} sm={12} xs={12}>
-          <Item>
-                <BrewBox />
-          </Item>
-        </Grid>
-        <Grid item md={6} sm={12} xs={12} className="rightBioGrid">
-         <Item>
-            <MapBox />
-            </Item>
-        </Grid>
+    <Grid
+      container
+      spacing={2}
+      className="leftBioGrid"
+      sx={{
+        marginTop: "10px",
+        display: "flex",
+        justifyContent: "space-evenly",
+      }}
+    >
+      <Grid item md={6} sm={12} xs={12}>
+        <Item>
+          <BrewBox />
+        </Item>
       </Grid>
-  
+      <Grid item md={6} sm={12} xs={12} className="rightBioGrid">
+        <Item>
+          <MapBox />
+        </Item>
+      </Grid>
+    </Grid>
   );
 }
