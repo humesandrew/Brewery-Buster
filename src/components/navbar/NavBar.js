@@ -15,7 +15,7 @@ export default function ButtonAppBar() {
     <Box sx={{ flexGrow: 1, letterSpacing: 3 }}>
       <AppBar position="static">
         <Toolbar>
-        <Typography variant="h4" component="div" sx={{ flexGrow: 1, letterSpacing: 10 }}>
+        <Typography variant="h4" component="div" sx={{ flexGrow: 1, letterSpacing: 10, fontWeight: 'bold' }}>
             Brewery-Buster
           </Typography>
        Showing results for: 
