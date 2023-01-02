@@ -32,29 +32,30 @@ export default function BrewBox() {
   const [city, setCurrentCity] = useState("Denver");
   console.log(data);
   return (
-    <Box className="brewBox" sx={{height: '70vh'}}>
+    <Box sx={{height: '68vh'}}>
       <h1>Breweries in: {city} </h1>
       {isLoading && <div>Finding you some breweries...</div>}
       {error && (
         <div>{`There is a problem fetching the brewery data - ${error}`}</div>
       )}
+      <div className='brewBox'>
       <ul>
         {data &&
           data.map(({ id, name }) => (
-            <Box sx={{ flexGrow: 1 }}>
+            
+              <Box sx={{ flexGrow: 1 }}>
             <Grid>
               <Grid item xs={12} key={id}>
                 <Button variant="outlined" fullWidth className="brewButton" sx={{ margin: '0px 0px 5px -30px', color: 'black'}}>{name}</Button>
               </Grid>
               </Grid>
             </Box>
+           
           ))}
       </ul>
+      </div>
     </Box>
   );
 }
 
 
-// <Button key={id} variant="outlined">
-// <h3>{name}</h3>
-// </Button>
