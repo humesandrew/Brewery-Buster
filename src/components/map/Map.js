@@ -1,5 +1,6 @@
 import React from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
+import 'leaflet/dist/leaflet.css'
 import "./map.css";
 // import { showDataOnMap } from "./util";
 
@@ -9,7 +10,7 @@ function Map({ center, zoom }) {
    
     <MapContainer
   className="markercluster-map"
-  style={{height: '60vh'}}
+  style={{ height: "100%", minHeight: "100%" }}
   center={[51.0, 19.0]}
   zoom={4}
   maxZoom={18}
