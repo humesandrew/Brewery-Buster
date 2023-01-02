@@ -1,12 +1,5 @@
 .brewBox {
     text-align: center;
     overflow-y: scroll;
+    max-height: 59vh;
 }
-/* 
-.brewButton {
-    margin-bottom: 5px;
-    color: black;
-    background-color: transparent;
-    border-color: black;
-
-} */
