@@ -7,7 +7,7 @@ export default function MapBox() {
   return (
     <Box sx={{maxHeight: '68vh'}}>
       <h1>Mapbox</h1>
-      <Map />
+      <Map sx={{maxHeight: '68vh'}}/>
     </Box>
   );
 }
