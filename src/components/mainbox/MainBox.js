@@ -18,7 +18,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-export default function Bio() {
+export default function MainBox() {
   return (
     <Grid
       container

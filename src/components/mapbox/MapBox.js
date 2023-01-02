@@ -1,15 +1,13 @@
 import * as React from "react";
-
+import Box from "@mui/material/Box";
+import Map from "../map/Map";
 import "./mapbox.css";
 
-import Box from "@mui/material/Box";
-
 export default function MapBox() {
-   
   return (
-    <Box>
-      <h1>Map box</h1>
-     
+    <Box sx={{maxHeight: '68vh'}}>
+      <h1>Mapbox</h1>
+      <Map />
     </Box>
   );
 }
