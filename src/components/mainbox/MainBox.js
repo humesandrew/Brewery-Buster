@@ -25,9 +25,10 @@ export default function MainBox() {
       spacing={2}
       className="leftBioGrid"
       sx={{
-        marginTop: "10px",
+        marginTop: "0px",
         display: "flex",
         justifyContent: "space-evenly",
+       
       }}
     >
       <Grid item md={6} sm={12} xs={12}>

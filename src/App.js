@@ -10,12 +10,12 @@ function App() {
   const [search, setSearch] = React.useState("Denver");
  
   return (
-    <div>
+    <div className="maindiv">
       <SearchContext.Provider value={{search, setSearch}}>
       <NavBar></NavBar>
       <SearchBar></SearchBar>
       <div>
-        <MainBox />
+        <MainBox  />
       </div>
       </SearchContext.Provider>
     </div>
