@@ -1,11 +1,13 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import useFetch from "react-fetch-hook";
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+
+import { SearchContext } from '../../context/SearchContext';
 import "./brewbox.css";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -17,23 +19,24 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function BrewBox() {
+  const { search } = useContext(SearchContext);
   const options = {
     method: "GET",
     headers: {
       "x-rapidapi-host": "brianiswu-open-brewery-db-v1.p.rapidapi.com",
-      "x-rapidapi-key": "${process.env.BREWAPI}",
+      "x-rapidapi-key": "e303ab8e98msh1c7a974ed999e49p1872ddjsne9f8e2e5a276",
     },
   };
   const { isLoading, data, error } = useFetch(
-    "https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries?by_city=Denver&per_page=20",
+    "https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries?by_city=" + search + "&per_page=20",
     options,
     []
   );
-  const [city, setCurrentCity] = useState("Denver");
+  
   console.log(data);
   return (
     <Box sx={{height: '68vh'}}>
-      <h1>Breweries in: {city} </h1>
+      <h1>Breweries in: {search} </h1>
       {isLoading && <div>Finding you some breweries...</div>}
       {error && (
         <div>{`There is a problem fetching the brewery data - ${error}`}</div>

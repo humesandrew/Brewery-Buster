@@ -12,19 +12,22 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
 import AppBar from "@mui/material/AppBar";
+
+import { useContext } from "react";
+import { SearchContext } from '../../context/SearchContext';
 import "./searchbar.css";
 
 
 
 export default function SearchBar() {
-  const [search, setSearch] = React.useState("Denver");
+ const { search, setSearch } = useContext(SearchContext);
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <Button className='submitButton' onClick={() => {console.log(search)}}>Submit</Button>
+          <Button className='submitButton' variant='primary' onClick={() => {console.log(search)}}>Submit</Button>
           <TextField
             fullWidth
             id="outlined-basic"
