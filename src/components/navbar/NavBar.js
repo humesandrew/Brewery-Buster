@@ -15,8 +15,8 @@ export default function NavBar() {
   const { search } = useContext(SearchContext);
   return (
     <Box sx={{ flexGrow: 1, letterSpacing: 3 }}>
-      <AppBar position="static">
-        <Toolbar>
+      <AppBar position="static" >
+        <Toolbar sx={{backgroundColor: "#242423"}}>
         <Typography variant="h4" component="div" sx={{ flexGrow: 1, letterSpacing: 10, fontWeight: 'bold' }}>
             Brewery-Buster
           </Typography>

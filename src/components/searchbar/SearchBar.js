@@ -26,7 +26,7 @@ export default function SearchBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar sx={{backgroundColor: "#333533"}}>
           <Button className='submitButton' variant='primary' onClick={() => {console.log(search)}}>Submit</Button>
           <TextField
             fullWidth
