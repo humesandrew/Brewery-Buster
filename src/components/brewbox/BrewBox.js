@@ -21,7 +21,7 @@ export default function BrewBox() {
     method: "GET",
     headers: {
       "x-rapidapi-host": "brianiswu-open-brewery-db-v1.p.rapidapi.com",
-      "x-rapidapi-key": process.env.BREWAPI,
+      "x-rapidapi-key": "${process.env.BREWAPI}",
     },
   };
   const { isLoading, data, error } = useFetch(
