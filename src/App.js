@@ -15,7 +15,9 @@ function App() {
       <NavBar></NavBar>
       <SearchBar></SearchBar>
       <div>
+      
         <MainBox  />
+        
       </div>
       </SearchContext.Provider>
     </div>

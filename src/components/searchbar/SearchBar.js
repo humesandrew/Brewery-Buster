@@ -3,11 +3,9 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+
 import TextField from "@mui/material/TextField";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -32,15 +30,15 @@ export default function SearchBar() {
           </div>
           <TextField
             fullWidth
-            id="outlined-basic"
+           
            placeholder="Where would you like to see breweries?"
-            variant="outlined"
-            sx={{ backgroundColor: "white" }}
+            
+            sx={{ backgroundColor: "white", borderRadius: '10px'}}
             onChange={(e) => setSearch(e.target.value)}
           />
 
           <div>
-            <Accordion sx={{ ml: "20px" }}>
+            <Accordion sx={{ ml: "30px", marginRight: '0px'}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
@@ -48,9 +46,9 @@ export default function SearchBar() {
               >
                 <Typography>Recent Searches</Typography>
               </AccordionSummary>
-              <AccordionDetails>
+              <AccordionDetails sx={{ ml: "20px" }}>
                 <Typography>
-                  This will be local storage results mapped
+                 local storage results 
                 </Typography>
               </AccordionDetails>
             </Accordion>
