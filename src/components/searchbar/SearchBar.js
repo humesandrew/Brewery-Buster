@@ -27,11 +27,13 @@ export default function SearchBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar sx={{backgroundColor: "#333533"}}>
-          <Button className='submitButton' variant='primary' onClick={() => {console.log(search)}}>Submit</Button>
+          <div className='submitButton'>
+          <Button variant='primary' onClick={() => {console.log(search)}}>Submit</Button>
+          </div>
           <TextField
             fullWidth
             id="outlined-basic"
-            label="Where would you like to see breweries?"
+           placeholder="Where would you like to see breweries?"
             variant="outlined"
             sx={{ backgroundColor: "white" }}
             onChange={(e) => setSearch(e.target.value)}
