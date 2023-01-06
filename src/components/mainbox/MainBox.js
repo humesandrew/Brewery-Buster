@@ -32,12 +32,12 @@ export default function MainBox() {
       }}
     >
       <Grid item md={6} sm={12} xs={12}>
-        <Item>
+        <Item sx={{backgroundColor: '#E8EDDF'}}>
           <BrewBox />
         </Item>
       </Grid>
       <Grid item md={6} sm={12} xs={12} className="rightBioGrid">
-        <Item>
+        <Item sx={{backgroundColor: '#E8EDDF'}}>
           <MapBox />
         </Item>
       </Grid>
