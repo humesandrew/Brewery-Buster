@@ -27,7 +27,7 @@ const getSearch = document.getElementById('inputField');
       <AppBar position="static">
         <Toolbar sx={{backgroundColor: "#333533"}}>
           <div className='submitButton'>
-          <Button variant='primary' onClick={() => {setSearch(getSearch.value)}}>Submit</Button>
+          <Button variant='primary' onClick={async () => {setSearch(getSearch.value)}}>Submit</Button>
           </div>
           <TextField
             fullWidth
