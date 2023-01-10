@@ -20,21 +20,22 @@ import "./searchbar.css";
 
 export default function SearchBar() {
  const { search, setSearch } = useContext(SearchContext);
+const getSearch = document.getElementById('inputField');
 
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar sx={{backgroundColor: "#333533"}}>
           <div className='submitButton'>
-          <Button variant='primary' onClick={() => {console.log(search)}}>Submit</Button>
+          <Button variant='primary' onClick={() => {setSearch(getSearch.value)}}>Submit</Button>
           </div>
           <TextField
             fullWidth
-           
+           id='inputField'
            placeholder="Where would you like to see breweries?"
-            
+          
             sx={{ backgroundColor: "white", borderRadius: '10px'}}
-            onChange={(e) => setSearch(e.target.value)}
+            // onChange={(e) => setSearch(e.target.value)}
           />
 
           <div>
