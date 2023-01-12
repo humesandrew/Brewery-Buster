@@ -44,12 +44,16 @@ export default function BrewBox() {
       <div className='brewBox'>
       <ul>
         {data &&
-          data.map(({ id, name }) => (
+          data.map(({ id, name, longitude, latitude }) => (
             
               <Box sx={{ flexGrow: 1 }}>
             <Grid>
               <Grid item xs={12} key={id}>
-                <Button variant="outlined" fullWidth className="brewButton" sx={{ margin: '0px 0px 5px -30px', color: 'black'}}>{name}</Button>
+                <Button variant="outlined" fullWidth className="brewButton" sx={{ margin: '0px 0px 5px -30px', color: 'black'}}>{name}
+                <br></br> Latitude
+                {latitude}
+                <br></br> Longitude
+                {longitude}</Button>
               </Grid>
               </Grid>
             </Box>
