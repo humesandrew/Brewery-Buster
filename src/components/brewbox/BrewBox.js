@@ -8,6 +8,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
 import { SearchContext } from '../../context/SearchContext';
+import { BreweryContext } from '../../context/BreweryContext';
 import "./brewbox.css";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -33,10 +34,11 @@ export default function BrewBox() {
     []
   );
   
-  console.log(data);
+  // console.log(data);//
 
-const [ brewery, setBrewery ] = useState(null);
-
+const { brewery, setBrewery } = useContext(BreweryContext);
+// as soon as a made this context and not useState, it said 'setBrewery is not a fxn'// 
+// but if i revert back to useState it console logs the state of brewery with name, lat, lon, //
 
 
 
@@ -55,7 +57,7 @@ const [ brewery, setBrewery ] = useState(null);
               <Box sx={{ flexGrow: 1 }}>
             <Grid>
               <Grid item xs={12} key={id}>
-                <Button variant="outlined" fullWidth className="brewButton" sx={{ margin: '0px 0px 5px -30px', color: 'black'}} onClick={() => {
+                <Button variant="outlined" fullWidth className="brewButton" sx={{ margin: '0px 0px 5px -30px', color: 'black'}} onClick={async () => {
                  setBrewery({name, latitude, longitude});
                 console.log(brewery);
                   }}>{name}
