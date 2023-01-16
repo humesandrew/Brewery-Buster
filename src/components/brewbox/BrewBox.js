@@ -34,6 +34,12 @@ export default function BrewBox() {
   );
   
   console.log(data);
+
+const [ brewery, setBrewery ] = useState(null);
+
+
+
+
   return (
     <Box sx={{height: '68vh'}}>
       <h1>Breweries in {search} </h1>
@@ -49,7 +55,10 @@ export default function BrewBox() {
               <Box sx={{ flexGrow: 1 }}>
             <Grid>
               <Grid item xs={12} key={id}>
-                <Button variant="outlined" fullWidth className="brewButton" sx={{ margin: '0px 0px 5px -30px', color: 'black'}}>{name}
+                <Button variant="outlined" fullWidth className="brewButton" sx={{ margin: '0px 0px 5px -30px', color: 'black'}} onClick={() => {
+                 setBrewery({name, latitude, longitude});
+                console.log(brewery);
+                  }}>{name}
                 <br></br> Latitude
                 {latitude}
                 <br></br> Longitude
