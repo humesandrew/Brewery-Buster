@@ -12,8 +12,8 @@ function App() {
   return (
     <div className="maindiv">
       <SearchContext.Provider value={{search, setSearch}}>
-      <NavBar></NavBar>
-      <SearchBar></SearchBar>
+      <NavBar />
+      <SearchBar />
       <div>
       
         <MainBox  />
