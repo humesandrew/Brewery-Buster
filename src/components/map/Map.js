@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
+
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 // import "leaflet/dist/leaflet.css";
 
 import { SearchContext } from "../../context/SearchContext";
+import { BreweryContext } from "../../context/BreweryContext";
 import "./map.css";
+
 // import { showDataOnMap } from "./util";
+
 
 function Map({ center, zoom }) {
 
+  const { brewery } = useContext(BreweryContext);
 
 
   return (
     <div className="map" style={{ height: "60vh" }}>
+    
+
       <MapContainer
         className="markercluster-map"
         style={{ height: "100%", minHeight: "100%" }}
