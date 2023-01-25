@@ -4,12 +4,12 @@ import NavBar from "./components/navbar/NavBar";
 import SearchBar from "./components/searchbar/SearchBar";
 import MainBox from "./components/mainbox/MainBox";
 import { SearchContext } from './context/SearchContext';
-import { BreweryContext } from './context/BreweryContext';//
+import { BreweryContext } from './context/BreweryContext';
 
 
 function App() {
   const [search, setSearch] = React.useState("Denver");
-  const [brewery, setBrewery] = React.useState(null);//
+  const [brewery, setBrewery] = React.useState(null);
   return (
     <div className="maindiv">
       <SearchContext.Provider value={{search, setSearch}}>
