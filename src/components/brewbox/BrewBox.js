@@ -46,6 +46,7 @@ export default function BrewBox() {
   useEffect(() => {
     console.log(brewery);
   }, [brewery]);
+  
 
   return (
     <Box sx={{ height: "68vh" }}>
