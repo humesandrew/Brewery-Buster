@@ -9,7 +9,7 @@ import { BreweryContext } from './context/BreweryContext';
 
 function App() {
   const [search, setSearch] = React.useState("Denver");
-  const [brewery, setBrewery] = React.useState(null);
+  const [brewery, setBrewery] = React.useState({});
   return (
     <div className="maindiv">
       <SearchContext.Provider value={{search, setSearch}}>

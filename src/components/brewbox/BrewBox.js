@@ -46,7 +46,6 @@ export default function BrewBox() {
   useEffect(() => {
     console.log(brewery);
   }, [brewery]);
-  
 
   return (
     <Box sx={{ height: "68vh" }}>
@@ -68,9 +67,7 @@ export default function BrewBox() {
                       className="brewButton"
                       sx={{ margin: "0px 0px 5px -30px", color: "black" }}
                       onClick={async () => {
-                        setBrewery({ name, latitude, longitude }, () => {
-                          console.log(brewery);
-                        });
+                        setBrewery({ name, latitude, longitude });
                       }}
                     >
                       {name}
