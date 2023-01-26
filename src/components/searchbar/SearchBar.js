@@ -19,7 +19,7 @@ import "./searchbar.css";
 
 
 export default function SearchBar() {
- const { search, setSearch } = useContext(SearchContext);
+ const { setSearch } = useContext(SearchContext);
 
 
   return (
