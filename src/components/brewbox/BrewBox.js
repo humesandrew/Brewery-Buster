@@ -2,9 +2,7 @@ import * as React from "react";
 import { useEffect, useContext } from "react";
 import useFetch from "react-fetch-hook";
 import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 
 import { SearchContext } from "../../context/SearchContext";
