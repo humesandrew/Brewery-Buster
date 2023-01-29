@@ -28,7 +28,7 @@ export default function BrewBox() {
     []
   );
 
-  // console.log(data);//
+
 
   // const [ brewery, setBrewery ] = useState(null); //
   // as soon as a made this context and not useState, it said 'setBrewery is not a fxn'//
@@ -49,7 +49,7 @@ export default function BrewBox() {
       <div className="brewBox">
         <ul>
           {data &&
-            data.map(({ id, name, longitude, latitude }) => (
+            data.map(({ id, name, longitude, latitude, brewery_type, website_url, phone, street, state, city }) => (
               <Box sx={{ flexGrow: 1 }}>
                 <Grid>
                   <Grid item xs={12} key={id}>
@@ -59,7 +59,7 @@ export default function BrewBox() {
                       className="brewButton"
                       sx={{ margin: "0px 0px 5px -30px", color: "black" }}
                       onClick={async () => {
-                        setBrewery({ name, latitude, longitude });
+                        setBrewery({ name, latitude, longitude, brewery_type, website_url, phone, street, state, city });
                       }}
                     >
                       {name}

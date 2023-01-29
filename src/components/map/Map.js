@@ -51,7 +51,7 @@ const centerLng = brewery && parseFloat(brewery.longitude) ? parseFloat(brewery.
         />
         <Marker position={[centerLat, centerLng]}>
           <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
+            <h3>{brewery.name}</h3>{brewery.street}<br></br>{brewery.city}, {brewery.state} <br></br>{brewery.phone}
           </Popup>
         </Marker>
       </MapContainer>
