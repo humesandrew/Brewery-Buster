@@ -64,10 +64,7 @@ export default function BrewBox() {
                       }}
                     >
                       {name}
-                      <br></br> Latitude
-                      {latitude}
-                      <br></br> Longitude
-                      {longitude}
+                   
                     </Button>
                   </Grid>
                 </Grid>

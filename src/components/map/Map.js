@@ -42,7 +42,7 @@ const centerLng = brewery && parseFloat(brewery.longitude) ? parseFloat(brewery.
         style={{ height: "100%", minHeight: "100%" }}
         center={[centerLat, centerLng]}
         
-        zoom={4}
+        zoom={7}
         maxZoom={18}
       ><Recenter lat={centerLat} lng={centerLng} />
         <TileLayer

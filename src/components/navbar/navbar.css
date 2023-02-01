@@ -1,3 +1,16 @@
 .navBar {
     background-color: #242423;
+   
+        position: fixed;
+        top: 0;
+        width: 100%;
+        max-width: 1349px;
+        z-index: 999;
+    
+}
+
+
+.resultsDiv {
+    
+    margin-right: 35px;
 }
