@@ -29,13 +29,13 @@ export default function SearchBar() {
           <div className='submitButton'>
           <Button variant='primary' onClick={async () => {
             const getSearch = document.getElementById('inputField');
-            setSearch(getSearch.value)}}>Submit</Button>
+            setSearch(getSearch.value.trim())}}>Submit</Button>
           </div>
           <TextField
             fullWidth
            id='inputField'
            placeholder="Where would you like to see breweries?"
-          
+           onKeyDown={e => e.keyCode === 13 && setSearch(e.target.value.trim())}
             sx={{ backgroundColor: "white", borderRadius: '10px'}}
             // onChange={(e) => setSearch(e.target.value)}
           />
