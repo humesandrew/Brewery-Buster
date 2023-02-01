@@ -29,6 +29,11 @@ export default function SearchBar() {
           <div className='submitButton'>
           <Button variant='primary' onClick={async () => {
             const getSearch = document.getElementById('inputField');
+            let cities = JSON.parse(localStorage.getItem("cities")) || [];
+            cities.push(getSearch.value.trim());
+            
+            localStorage.setItem("cities", JSON.stringify(cities));
+            console.log(localStorage);
             setSearch(getSearch.value.trim())}}>Submit</Button>
           </div>
           <TextField
