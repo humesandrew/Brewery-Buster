@@ -24,7 +24,7 @@ export default function SearchBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="fixed" className="searchBar">
         <Toolbar sx={{backgroundColor: "#333533"}}>
           <div className='submitButton'>
           <Button variant='primary' onClick={async () => {
