@@ -43,6 +43,7 @@ export default function BrewBox() {
     <Box sx={{ height: "68vh" }}>
       <h1>Breweries in {search} </h1>
       {isLoading && <div>Finding you some breweries...</div>}
+   
       {error && (
         <div>{`There is a problem fetching the brewery data - ${error}`}</div>
       )}

@@ -7,13 +7,32 @@ import "./mapbox.css";
 
 export default function MapBox() {
   const { brewery } = useContext(BreweryContext);
-
+  const lat = parseFloat(brewery.latitude);
+  const lng = parseFloat(brewery.longitude);
   return (
-    <Box sx={{ maxHeight: "68vh" }}>
-      {!brewery.name && <h1>Mapbox</h1>}
-      {brewery && (
+    <Box sx={{ maxHeight: "70vh" }}>
+      {brewery && !isNaN(lat) && !isNaN(lng) ? (
         <div>
-          <h2>{brewery.name}</h2>
+          <h1>
+            <a href={brewery.website_url} target="_blank" rel="noreferrer">
+              {brewery.name}
+            </a>
+          </h1>
+        </div>
+      ) : (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+          }}
+        >
+          <h2>No coordinates given.</h2>
+          <h2>
+            <a href={brewery.website_url} target="_blank" rel="noreferrer">
+              {brewery.website_url}
+            </a>
+          </h2>
         </div>
       )}
 
