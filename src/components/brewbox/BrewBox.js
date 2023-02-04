@@ -40,7 +40,7 @@ export default function BrewBox() {
   }, [brewery]);
 
   return (
-    <Box sx={{ height: "68vh" }}>
+    <Box sx={{ height: "68vh", marginTop: "0px" }}>
       <h1>Breweries in {search} </h1>
       {isLoading && <div>Finding you some breweries...</div>}
    

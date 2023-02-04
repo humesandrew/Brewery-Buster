@@ -36,7 +36,7 @@ const centerLat = brewery && parseFloat(brewery.latitude) ? parseFloat(brewery.l
 const centerLng = brewery && parseFloat(brewery.longitude) ? parseFloat(brewery.longitude) : initialLng;
   
   return (
-    <div className="map" style={{ height: "60vh" }}>
+    <div className="map" style={{ maxHeight: "59vh" }}>
       <MapContainer
         className="markercluster-map"
         style={{ height: "100%", minHeight: "100%" }}

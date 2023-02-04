@@ -25,19 +25,19 @@ export default function MainBox() {
       spacing={2}
       className="leftBioGrid"
       sx={{
-        marginTop: "135px",
-
+        marginTop: "auto",
+        height: '100%',
         display: "flex",
         justifyContent: "space-evenly",
       }}
     >
       <Grid item md={6} sm={12} xs={12}>
-        <Item sx={{ backgroundColor: "#E8EDDF" }}>
+        <Item sx={{ backgroundColor: "#E8EDDF", marginTop: "135px" }}>
           <BrewBox />
         </Item>
       </Grid>
       <Grid item md={6} sm={12} xs={12} className="rightBioGrid">
-        <Item sx={{ backgroundColor: "#E8EDDF" }}>
+        <Item sx={{ backgroundColor: "#E8EDDF", marginTop: "135px" }}>
           <MapBox />
         </Item>
       </Grid>
