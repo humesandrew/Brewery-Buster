@@ -10,7 +10,7 @@ export default function MapBox() {
   const lat = parseFloat(brewery.latitude);
   const lng = parseFloat(brewery.longitude);
   return (
-    <Box sx={{ maxHeight: "70vh" }}>
+    <Box>
       {brewery && !isNaN(lat) && !isNaN(lng) ? (
         <div>
           <h1>
@@ -36,7 +36,7 @@ export default function MapBox() {
         </div>
       )}
 
-      <Map sx={{ maxHeight: "68vh" }} />
+      <Map/>
     </Box>
   );
 }
