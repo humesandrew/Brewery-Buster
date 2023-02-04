@@ -13,11 +13,11 @@ export default function MapBox() {
     <Box>
       {brewery && !isNaN(lat) && !isNaN(lng) ? (
         <div>
-          <h1>
+          <h2>
             <a href={brewery.website_url} target="_blank" rel="noreferrer">
               {brewery.name}
             </a>
-          </h1>
+          </h2>
         </div>
       ) : (
         <div
