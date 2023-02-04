@@ -29,6 +29,15 @@ export default function SearchBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" className="searchBar">
         <Toolbar sx={{backgroundColor: "#333533"}}>
+          
+          <TextField
+            fullWidth
+           id='inputField'
+           placeholder="Where would you like to see breweries?"
+           onKeyDown={e => e.keyCode === 13 && setSearch(e.target.value.trim())}
+            sx={{ backgroundColor: "white", borderRadius: '10px'}}
+            // onChange={(e) => setSearch(e.target.value)}
+          />
           <div className='submitButton'>
           <Button variant='primary' onClick={async () => {
             const getSearch = document.getElementById('inputField');
@@ -39,14 +48,6 @@ export default function SearchBar() {
             console.log(localStorage);
             setSearch(getSearch.value.trim())}}>Submit</Button>
           </div>
-          <TextField
-            fullWidth
-           id='inputField'
-           placeholder="Where would you like to see breweries?"
-           onKeyDown={e => e.keyCode === 13 && setSearch(e.target.value.trim())}
-            sx={{ backgroundColor: "white", borderRadius: '10px'}}
-            // onChange={(e) => setSearch(e.target.value)}
-          />
 
 <div>
   <Accordion sx={{ ml: "30px", marginRight: '0px'}}>
