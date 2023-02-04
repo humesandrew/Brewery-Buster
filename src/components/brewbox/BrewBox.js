@@ -40,8 +40,8 @@ export default function BrewBox() {
   }, [brewery]);
 
   return (
-    <Box sx={{ height: "68vh", marginTop: "0px" }}>
-      <h1>Breweries in {search} </h1>
+    <Box sx={{ height: "68vh" }}>
+      <h2>Breweries in {search} </h2>
       {isLoading && <div>Finding you some breweries...</div>}
    
       {error && (
@@ -58,7 +58,7 @@ export default function BrewBox() {
                       variant="outlined"
                       fullWidth
                       className="brewButton"
-                      sx={{ margin: "0px 0px 5px -30px", color: "black" }}
+                      sx={{ margin: "0px 0px 5px -50px", color: "black" }}
                       onClick={async () => {
                         setBrewery({ name, latitude, longitude, brewery_type, website_url, phone, street, state, city });
                       }}
