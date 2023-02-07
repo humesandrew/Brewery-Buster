@@ -56,7 +56,7 @@ export default function SearchBar() {
       aria-controls="panel1a-content"
       id="panel1a-header"
     >
-      <Typography>Recent Searches</Typography>
+      <Typography>Recent</Typography>
     </AccordionSummary>
     <AccordionDetails sx={{ ml: "20px" }}>
     

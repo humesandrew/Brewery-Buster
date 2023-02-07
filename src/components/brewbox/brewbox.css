@@ -5,7 +5,7 @@
 }
 
 .brewButton {
-    background: linear-gradient(to right, lightblue, white, lightblue);
+    background-image: linear-gradient(to right, #e8eddf, #e3e9c8, #e2e4b0, #e5de97, #ead77e, #ead77e, #ead77e, #ead77e, #e5de97, #e2e4b0, #e3e9c8, #e8eddf);
     border: 1px solid lightblue;
     border-radius: 10px;
     padding: 10px 20px;
