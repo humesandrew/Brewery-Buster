@@ -16,7 +16,7 @@ import { useContext, useState, useEffect } from "react";
 import { SearchContext } from '../../context/SearchContext';
 import "./searchbar.css";
 
-
+import Recent from "../recent/Recent";
 
 export default function SearchBar() {
  const { setSearch } = useContext(SearchContext);
@@ -34,9 +34,18 @@ export default function SearchBar() {
             fullWidth
            id='inputField'
            placeholder="Where would you like to see breweries?"
-           onKeyDown={e => e.keyCode === 13 && setSearch(e.target.value.trim())}
             sx={{ backgroundColor: "white", borderRadius: '10px'}}
-            // onChange={(e) => setSearch(e.target.value)}
+            onKeyDown={async (e) => {
+              if (e.key === 'Enter') {
+              const getSearch = document.getElementById('inputField');
+              let cities = JSON.parse(localStorage.getItem("cities")) || [];
+              cities.push(getSearch.value.trim());
+              
+              localStorage.setItem("cities", JSON.stringify(cities));
+              console.log(localStorage);
+              setSearch(getSearch.value.trim())}}}
+            
+           
           />
           <div className='submitButton'>
           <Button variant='primary' onClick={async () => {
@@ -50,21 +59,7 @@ export default function SearchBar() {
           </div>
 
 <div>
-  <Accordion sx={{ ml: "30px", marginRight: '0px'}}>
-    <AccordionSummary
-      expandIcon={<ExpandMoreIcon />}
-      aria-controls="panel1a-content"
-      id="panel1a-header"
-    >
-      <Typography>Recent Searches</Typography>
-    </AccordionSummary>
-    <AccordionDetails sx={{ ml: "20px" }}>
-    
-      {localStorageResults.length !== 0 && localStorageResults.map((cities, index) => (
-        <Typography key={index}>{cities}</Typography>
-      ))}
-    </AccordionDetails>
-  </Accordion>
+            <Recent />
 </div>
 
         </Toolbar>
