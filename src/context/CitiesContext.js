@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 
-export const CitiesContext = createContext([]);
+export const CitiesContext = createContext({ cities: []});
 
 const CitiesContextProvider = (props) => {
   const [cities, setCities] = useState([]);
