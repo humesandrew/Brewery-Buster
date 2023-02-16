@@ -1,19 +1,14 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AppBar from "@mui/material/AppBar";
 import { useContext, useEffect } from "react";
 import { SearchContext } from "../../context/SearchContext";
 import { CitiesContext } from "../../context/CitiesContext";
 import Recent from "../recent/Recent";
-import './searchbar.css';
+import './searchbar.css'
 
 export default function SearchBar() {
   const { setSearch } = useContext(SearchContext);
