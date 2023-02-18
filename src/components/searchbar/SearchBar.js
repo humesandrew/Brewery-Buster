@@ -10,6 +10,9 @@ import { CitiesContext } from "../../context/CitiesContext";
 import Recent from "../recent/Recent";
 import './searchbar.css'
 
+
+
+
 export default function SearchBar() {
   const { setSearch } = useContext(SearchContext);
   const { cities, setCities } = useContext(CitiesContext);
@@ -22,20 +25,29 @@ export default function SearchBar() {
   const handleEnter = (e) => {
     if (e.key === "Enter") {
       const getSearch = document.getElementById("inputField");
-      let updatedCities = [...cities, getSearch.value.trim()];
+      const cityName = getSearch.value.trim();
+      const newCity = { id: Date.now(), name: cityName };
+      const updatedCities = [...cities, newCity];
       localStorage.setItem("cities", JSON.stringify(updatedCities));
       setCities(updatedCities);
-      setSearch(getSearch.value.trim());
+      setSearch(cityName);
     }
   };
+  
 
   const handleSubmit = () => {
     const getSearch = document.getElementById("inputField");
-    let updatedCities = [...cities, getSearch.value.trim()];
+    const city = getSearch.value.trim();
+    const newCity = {
+      id: Date.now(),
+      name: city,
+    };
+    const updatedCities = [...cities, newCity];
     localStorage.setItem("cities", JSON.stringify(updatedCities));
     setCities(updatedCities);
-    setSearch(getSearch.value.trim());
+    setSearch(city);
   };
+  
 
   return (
     <Box sx={{ flexGrow: 1 }}>

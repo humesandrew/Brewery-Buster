@@ -14,11 +14,16 @@ const CitiesContextProvider = (props) => {
     localStorage.setItem("cities", JSON.stringify(cities));
   }, [cities]);
 
+  const updateCities = (newCities) => {
+    setCities([...newCities]);
+  };
+
   return (
-    <CitiesContext.Provider value={{ cities, setCities }}>
+    <CitiesContext.Provider value={{ cities, updateCities }}>
       {props.children}
     </CitiesContext.Provider>
   );
 };
+
 
 export default CitiesContextProvider;
