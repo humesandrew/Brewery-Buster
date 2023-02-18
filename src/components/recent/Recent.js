@@ -10,6 +10,7 @@ import { CitiesContext } from "../../context/CitiesContext";
 
 export default function Recent() {
   const { cities } = useContext(CitiesContext);
+  const uniqueCities = [...new Set(cities)]; // remove duplicate values
 
   return (
     <Accordion sx={{ ml: "30px", marginRight: "0px" }}>
@@ -21,13 +22,12 @@ export default function Recent() {
         <Typography>Recent</Typography>
       </AccordionSummary>
       <AccordionDetails sx={{ ml: "20px" }}>
-        {cities.length === 0 ? (
+        {uniqueCities.length === 0 ? (
           <Typography>No recent cities found.</Typography>
         ) : (
-          cities.map((city) => (
+          uniqueCities.map((city) => (
             <div key={city.id}>
               <Typography>{city.name}</Typography>
-              <Typography>{city.state}</Typography>
             </div>
           ))
         )}
