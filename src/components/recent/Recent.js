@@ -6,10 +6,9 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import Divider from "@mui/material/Divider";
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import Box from '@mui/material/Box';
 
 import { CitiesContext } from "../../context/CitiesContext";
 
@@ -19,12 +18,14 @@ const style = {
   bgcolor: "background.paper",
 };
 
+
+
 export default function Recent() {
   const { cities } = useContext(CitiesContext);
   const uniqueCities = [...new Set(cities)]; // remove duplicate values
 
   return (
-    <Accordion sx={{ ml: "30px", marginRight: "0px" }}>
+    <Accordion sx={{}}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
@@ -32,20 +33,26 @@ export default function Recent() {
       >
         <Typography>Recent</Typography>
       </AccordionSummary>
-      <AccordionDetails sx={{ ml: "20px" }}>
+      <AccordionDetails sx={{}}>
         {uniqueCities.length === 0 ? (
           <Typography>No recent cities found.</Typography>
         ) : (
           uniqueCities.map((city) => (
+            <div key={city.id}>
             
-              <List sx={style} component="nav" aria-label="mailbox folders">
-                <div key={city.id}>
-                <ListItem button>
-                  <ListItemText primary={<Typography>{city.name}</Typography>} />
-                </ListItem>
-                </div>
-                <Divider />
-              </List>
+            <ButtonGroup
+        orientation="vertical"
+        aria-label="vertical contained button group"
+        variant="text"
+     
+      >
+        <Button sx={{ color: "black" }} size="small">{<Typography variant="subtitle1">{city.name}</Typography>}</Button>
+      </ButtonGroup>
+               
+               
+                
+               
+              </div>
               
             
           ))
