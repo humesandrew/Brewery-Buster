@@ -6,11 +6,12 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
-import Box from '@mui/material/Box';
+import Button from "@mui/material/Button";
+import ButtonGroup from "@mui/material/ButtonGroup";
+import Box from "@mui/material/Box";
 
 import { CitiesContext } from "../../context/CitiesContext";
+import { SearchContext } from "../../context/SearchContext";
 
 const style = {
   width: "100%",
@@ -18,10 +19,9 @@ const style = {
   bgcolor: "background.paper",
 };
 
-
-
 export default function Recent() {
   const { cities } = useContext(CitiesContext);
+  const { setSearch } = useContext(SearchContext);
   const uniqueCities = [...new Set(cities)]; // remove duplicate values
 
   return (
@@ -39,22 +39,16 @@ export default function Recent() {
         ) : (
           uniqueCities.map((city) => (
             <div key={city.id}>
-            
-            <ButtonGroup
-        orientation="vertical"
-        aria-label="vertical contained button group"
-        variant="text"
-     
-      >
-        <Button sx={{ color: "black" }} size="small">{<Typography variant="subtitle1">{city.name}</Typography>}</Button>
-      </ButtonGroup>
-               
-               
-                
-               
-              </div>
-              
-            
+              <ButtonGroup
+                orientation="vertical"
+                aria-label="vertical contained button group"
+                variant="text"
+              >
+                <Button sx={{ color: "black" }} size="small" onClick={async () => {setSearch(city.name)}}>
+                  {<Typography variant="body1">{city.name}</Typography>}
+                </Button>
+              </ButtonGroup>
+            </div>
           ))
         )}
       </AccordionDetails>
