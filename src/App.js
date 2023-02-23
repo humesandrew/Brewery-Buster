@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import ParticlesBg from 'particles-bg'
 import NavBar from "./components/navbar/NavBar";
 import SearchBar from "./components/searchbar/SearchBar";
 import MainBox from "./components/mainbox/MainBox";
@@ -18,8 +19,10 @@ function App() {
         <BreweryContext.Provider value={{ brewery, setBrewery }}>
           <NavBar />
           <SearchBar />
-          <div>
+          <div className="particleDiv">
+       
             <MainBox />
+            {/* <ParticlesBg type="circle" bg={true} /> */}
           </div>
         </BreweryContext.Provider>
       </SearchContext.Provider>

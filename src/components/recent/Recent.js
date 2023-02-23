@@ -8,16 +8,9 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
-import Box from "@mui/material/Box";
 
 import { CitiesContext } from "../../context/CitiesContext";
 import { SearchContext } from "../../context/SearchContext";
-
-const style = {
-  width: "100%",
-  maxWidth: 360,
-  bgcolor: "background.paper",
-};
 
 export default function Recent() {
   const { cities } = useContext(CitiesContext);
@@ -44,7 +37,13 @@ export default function Recent() {
                 aria-label="vertical contained button group"
                 variant="text"
               >
-                <Button sx={{ color: "black" }} size="small" onClick={async () => {setSearch(city.name)}}>
+                <Button
+                  sx={{ color: "black" }}
+                  size="small"
+                  onClick={async () => {
+                    setSearch(city.name);
+                  }}
+                >
                   {<Typography variant="body1">{city.name}</Typography>}
                 </Button>
               </ButtonGroup>
