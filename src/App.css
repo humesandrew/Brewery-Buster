@@ -1,5 +1,9 @@
 .maindiv {
     background-color: #F5CB5C;
-    min-height: 100vh;
+    min-height: 100%;
    
+}
+
+.particleDiv {
+    max-height: 100vh;
 }

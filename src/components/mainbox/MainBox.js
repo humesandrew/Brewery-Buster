@@ -1,5 +1,4 @@
 import React from "react";
-
 import BrewBox from "../brewbox/BrewBox";
 import MapBox from "../mapbox/MapBox";
 
@@ -20,6 +19,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function MainBox() {
   return (
+   
     <Grid
       container
       spacing={2}
@@ -31,6 +31,7 @@ export default function MainBox() {
         justifyContent: "space-evenly",
       }}
     >
+       
       <Grid item md={6} sm={12} xs={12}>
         <Item sx={{ backgroundColor: "#E8EDDF", marginTop: "135px" }}>
           <BrewBox />
@@ -40,7 +41,10 @@ export default function MainBox() {
         <Item sx={{ backgroundColor: "#E8EDDF", marginTop: "135px" }}>
           <MapBox />
         </Item>
+      
       </Grid>
+     
     </Grid>
+  
   );
 }
