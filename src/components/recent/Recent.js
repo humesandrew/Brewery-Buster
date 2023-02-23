@@ -6,7 +6,18 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import Divider from "@mui/material/Divider";
+
 import { CitiesContext } from "../../context/CitiesContext";
+
+const style = {
+  width: "100%",
+  maxWidth: 360,
+  bgcolor: "background.paper",
+};
 
 export default function Recent() {
   const { cities } = useContext(CitiesContext);
@@ -26,9 +37,17 @@ export default function Recent() {
           <Typography>No recent cities found.</Typography>
         ) : (
           uniqueCities.map((city) => (
-            <div key={city.id}>
-              <Typography>{city.name}</Typography>
-            </div>
+            
+              <List sx={style} component="nav" aria-label="mailbox folders">
+                <div key={city.id}>
+                <ListItem button>
+                  <ListItemText primary={<Typography>{city.name}</Typography>} />
+                </ListItem>
+                </div>
+                <Divider />
+              </List>
+              
+            
           ))
         )}
       </AccordionDetails>
