@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import ParticlesBg from 'particles-bg';
+
 import NavBar from "./components/navbar/NavBar";
 import SearchBar from "./components/searchbar/SearchBar";
 import MainBox from "./components/mainbox/MainBox";
