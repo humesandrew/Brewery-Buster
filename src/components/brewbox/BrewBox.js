@@ -22,8 +22,7 @@ export default function BrewBox() {
   };
   const { isLoading, data, error } = useFetch(
     "https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries?by_city=" +
-      search +
-      "&per_page=20",
+      search,
     options,
     []
   );

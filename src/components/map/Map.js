@@ -35,7 +35,11 @@ const initialLng = -104.9
 const centerLat = brewery && parseFloat(brewery.latitude) ? parseFloat(brewery.latitude) : initialLat;
 const centerLng = brewery && parseFloat(brewery.longitude) ? parseFloat(brewery.longitude) : initialLng;
   
-  return (
+
+const phoneNumber = brewery.phone;
+const formattedPhoneNumber = phoneNumber ? `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6)}` : '';
+ 
+return (
     <div className="map" style={{ maxHeight: "59vh" }}>
       <MapContainer
         className="markercluster-map"
@@ -51,7 +55,7 @@ const centerLng = brewery && parseFloat(brewery.longitude) ? parseFloat(brewery.
         />
         <Marker position={[centerLat, centerLng]}>
           <Popup>
-            <h3>{brewery.name}</h3>{brewery.street}<br></br>{brewery.city}, {brewery.state} <br></br>{brewery.phone}
+            <h3>{brewery.name}</h3>{brewery.street}<br></br>{brewery.city}, {brewery.state} <br></br>{formattedPhoneNumber}
           </Popup>
         </Marker>
       </MapContainer>
