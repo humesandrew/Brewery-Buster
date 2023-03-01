@@ -1,4 +1,4 @@
-# Professional Portfolio
+# BREWERY-BUSTER!
 
   ![GitHub License](https://img.shields.io/badge/license-humesandrew-blue.svg)
   ## Description
@@ -28,7 +28,7 @@ This project was made by Andy Humes using React.js and Material-UI.
 
 Deployed Application: https://andyhumesportfolio.netlify.app/
 
-GitHub Repository: https://github.com/humesandrew/andyhumesportfolio
+GitHub Repository: https://github.com/humesandrew/brewery-buster/
 
 GitHub Profile: https://github.com/humesandrew
 
