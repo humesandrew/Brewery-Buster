@@ -17,9 +17,6 @@ This application is fully deployed on Netlify at https://brewery-buster.netlify.
 ## Usage
 Enjoy responsibly.
 
-## License
-This project is licensed under the MIT License.
-
 ## Contributing
 This project was made by Andy Humes using React.js and Material-UI.
 
