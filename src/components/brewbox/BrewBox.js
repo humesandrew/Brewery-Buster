@@ -13,17 +13,17 @@ import "./brewbox.css";
 
 export default function BrewBox() {
   const { search } = useContext(SearchContext);
-  const options = {
-    method: "GET",
-    headers: {
-      "x-rapidapi-host": "brianiswu-open-brewery-db-v1.p.rapidapi.com",
-      "x-rapidapi-key": "e303ab8e98msh1c7a974ed999e49p1872ddjsne9f8e2e5a276",
-    },
-  };
+  // const options = {
+  //   method: "GET",
+  //   headers: {
+  //     "x-rapidapi-host": "brianiswu-open-brewery-db-v1.p.rapidapi.com",
+  //     "x-rapidapi-key": "e303ab8e98msh1c7a974ed999e49p1872ddjsne9f8e2e5a276",
+  //   },
+  // };
   const { isLoading, data, error } = useFetch(
-    "https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries?by_city=" +
+    "https://api.openbrewerydb.org/v1/breweries?by_city=" +
       search,
-    options,
+    // options,
     []
   );
 
